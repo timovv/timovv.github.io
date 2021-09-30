@@ -35,7 +35,7 @@ jobs:
         working-directory: loconotion
         
       - name: Copy dist/ into the repo, discarding the page name
-        run: cp -r "$GITHUB_WORKSPACE/"dist/* pages_repo/dist
+        run: cp -r "$GITHUB_WORKSPACE/"dist/site pages_repo/dist
       
       - name: Push to GitHub pages
         working-directory: pages_repo
