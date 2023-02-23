@@ -26,7 +26,7 @@ jobs:
       - name: Run Loconotion
         run: |
           mkdir "$GITHUB_WORKSPACE/dist"
-          docker-compose run \
+          docker run \
           -v "$GITHUB_WORKSPACE/dist:/app/loconotion/dist" \
           -v "$GITHUB_WORKSPACE/pages_repo/site.toml:/app/loconotion/site.toml" \
           loconotion "site.toml"
