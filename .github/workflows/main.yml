@@ -21,18 +21,13 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: pages_repo
-
       - name: Download and install chromedriver
         run: sudo apt install chromium-chromedriver
-
       - name: Install Loconotion dependencies
-        run: pip install -r requirements.txt
-        working-directory: loconotion
-
+        run: pip install -r loconotion/requirements.txt
       - name: Run Loconotion
         run: |
-          python3 loconotion "../site.toml"
-        working-directory: loconotion
+          python3 loconotion "site.toml"
       - name: Push to GitHub pages
         run: |
           git config --global user.name "github-actions[bot]"
