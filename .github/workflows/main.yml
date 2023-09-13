@@ -31,7 +31,7 @@ jobs:
 
       - name: Run Loconotion
         run: |
-          python3 loconotion "site.toml"
+          python3 loconotion "../site.toml"
         working-directory: loconotion
       - name: Push to GitHub pages
         run: |
